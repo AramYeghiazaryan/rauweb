@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div>
+    <span id="name">Aram Yeghiazaryan</span>
+    <button onclick="addSign()">Press me</button>
+</div>
+</body>
+<script>
+    function addSign(){
+       var name = document.getElementById("name").innerHTML;
+       if(name.charAt(0)==='+'){
+           name=name.replace('+','-');
+       }else if(name.charAt(0)==='-'){
+           name=name.replace('-','+');
+       }else{
+          name='+' + name;
+       }
+      document.getElementById("name").innerHTML=name;
+    }
+</script>
+</html>
